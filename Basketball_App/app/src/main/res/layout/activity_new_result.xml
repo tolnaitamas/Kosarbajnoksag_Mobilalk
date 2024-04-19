@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NewResultActivity">
+
+        <TextView
+            android:id="@+id/registrationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/register_margin_top"
+            android:layout_marginEnd="0dp"
+            android:text="\nÚj eredmény felvitele"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_margin_top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Hazai csapat neve"
+            android:inputType="textPersonName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/registrationTextView"/>
+
+        <EditText
+            android:id="@+id/away"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_side"
+            android:layout_marginRight="@dimen/default_margin_side"
+            android:ems="10"
+            android:hint="Vendég csapat neve"
+            android:inputType="textPersonName"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/home"/>
+
+        <EditText
+            android:id="@+id/homepts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_side"
+            android:layout_marginRight="@dimen/default_margin_side"
+            android:ems="10"
+            android:hint="Hazai pontszáma"
+            android:inputType="phone"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/away"/>
+
+        <EditText
+            android:id="@+id/awaypts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/register_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_side"
+            android:layout_marginRight="@dimen/default_margin_side"
+            android:ems="10"
+            android:hint="Vendég pontszáma"
+            android:inputType="phone"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/homepts"/>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_side"
+            android:layout_marginTop="@dimen/register_margin_top"
+            android:layout_marginRight="@dimen/default_margin_side"
+            android:ems="10"
+            android:hint="Dátum (hónap.nap)"
+            android:inputType="phone"
+            android:layout_below="@id/awaypts"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="createResult"
+                android:text="Mentés" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:onClick="cancel"
+                android:text="Mégse" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "245280830611",
+    "project_id": "basketball-app-af127",
+    "storage_bucket": "basketball-app-af127.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245280830611:android:d9f89688062856a2af8966",
+        "android_client_info": {
+          "package_name": "com.example.basketball_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5axHVumO8rHWTBCWrFDJZcxPLFsrgQKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Kosárbajnokság</string>
+
+    <string-array name="homeName">
+        <item>GSW</item>
+        <item>BOS</item>
+        <item>LAL</item>
+        <item>MIL</item>
+    </string-array>
+    <string-array name="awayName">
+        <item>BOS</item>
+        <item>LAL</item>
+        <item>GSW</item>
+        <item>GSW</item>
+    </string-array>
+    <string-array name="homePts">
+        <item>110</item>
+        <item>98</item>
+        <item>113</item>
+        <item>124</item>
+    </string-array>
+    <string-array name="awayPts">
+        <item>92</item>
+        <item>83</item>
+        <item>130</item>
+        <item>140</item>
+    </string-array>
+    <string-array name="date">
+        <item>04.11</item>
+        <item>04.16</item>
+        <item>04.20</item>
+        <item>04.24</item>
+    </string-array>
+
+    <array name="homeImg">
+        <item>@drawable/gsw</item>
+        <item>@drawable/bos</item>
+        <item>@drawable/lal</item>
+        <item>@drawable/mil</item>
+    </array>
+    <array name="awayImg">
+        <item>@drawable/bos</item>
+        <item>@drawable/lal</item>
+        <item>@drawable/gsw</item>
+        <item>@drawable/gsw</item>
+    </array>
+
+
+    <string-array name="limit">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>Össz.</item>
+    </string-array>
+    <string-array name="rendezes">
+        <item>Csök.</item>
+        <item>Növ.</item>
+    </string-array>
+</resources>
