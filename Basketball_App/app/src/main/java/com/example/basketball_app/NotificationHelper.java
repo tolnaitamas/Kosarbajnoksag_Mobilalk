@@ -31,12 +31,12 @@ public class NotificationHelper {
             return;
 
         NotificationChannel channel = new NotificationChannel
-                (CHANNEL_ID, "Shop Notification", NotificationManager.IMPORTANCE_HIGH);
+                (CHANNEL_ID, "Basketball Notification", NotificationManager.IMPORTANCE_HIGH);
 
         channel.enableLights(true);
         channel.setLightColor(Color.RED);
         channel.enableVibration(true);
-        channel.setDescription("Notifications from Shop application");
+        channel.setDescription("Notifications from Basketball application");
 
         mNotifyManager.createNotificationChannel(channel);
     }
