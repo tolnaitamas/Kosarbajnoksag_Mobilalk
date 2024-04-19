@@ -1,0 +1,1 @@
+# Kosarbajnoksag_mobilalk
