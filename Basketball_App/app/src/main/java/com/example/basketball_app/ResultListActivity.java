@@ -35,6 +35,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class ResultListActivity extends AppCompatActivity {
 
@@ -51,9 +53,11 @@ public class ResultListActivity extends AppCompatActivity {
     private ArrayList<MatchResult> mItemsData;
     private ResultItemAdapter mAdapter;
 
-    private int gridNumber = 1;
+    private final int gridNumber = 1;
 
     private NotificationHelper mNotificationHelper;
+
+    public static HashMap<String, Integer> imgPath;
 
 
 
@@ -113,18 +117,31 @@ public class ResultListActivity extends AppCompatActivity {
         mp.setLooping(true);
 
         mNotificationHelper = new NotificationHelper(this);
+
+        imgPath = new HashMap<String, Integer>();
     }
 
     public void queryData() {
+
+        spinnerLimit.setSelection(3);
+        spinnerRendezes.setSelection(1);
 
         mItemsData.clear();
 
         //mItems.whereEqualTo()....
 
-        mItems.orderBy("date", Query.Direction.DESCENDING).get().addOnSuccessListener(queryDocumentSnapshots -> {
+        mItems.orderBy("date", Query.Direction.ASCENDING).get().addOnSuccessListener(queryDocumentSnapshots -> {
             for ( QueryDocumentSnapshot document :queryDocumentSnapshots){
                 MatchResult item = document.toObject(MatchResult.class);
                 item.setId(document.getId());
+
+                if (!(imgPath.containsKey(item.getHome()))){
+                    imgPath.put(item.getHome(),item.getHomeImg());
+                }
+                if (!(imgPath.containsKey(item.getAway()))){
+                    imgPath.put(item.getAway(),item.getAwayImg());
+                }
+
                 mItemsData.add(item);
             }
 

@@ -105,31 +105,31 @@ public class NewResultActivity extends AppCompatActivity {
 
         switch (home.getText().toString()) {
             case "GSW":
-                homeimg = 2131165341;
+                homeimg = ResultListActivity.imgPath.get("GSW");
                 break;
             case "BOS":
-                homeimg = 2131165306;
+                homeimg = ResultListActivity.imgPath.get("BOS");
                 break;
             case "LAL":
-                homeimg = 2131165358;
+                homeimg = ResultListActivity.imgPath.get("LAL");
                 break;
             case "MIL":
-                homeimg = 2131165434;
+                homeimg = ResultListActivity.imgPath.get("MIL");
                 break;
         }
 
         switch (away.getText().toString()) {
             case "GSW":
-                awayimg = 2131165341;
+                awayimg = ResultListActivity.imgPath.get("GSW");
                 break;
             case "BOS":
-                awayimg = 2131165306;
+                awayimg = ResultListActivity.imgPath.get("BOS");
                 break;
             case "LAL":
-                awayimg = 2131165358;
+                awayimg = ResultListActivity.imgPath.get("LAL");
                 break;
             case "MIL":
-                awayimg = 2131165434;
+                awayimg = ResultListActivity.imgPath.get("MIL");
                 break;
         }
 
