@@ -105,7 +105,7 @@ public class ResultListActivity extends AppCompatActivity {
 
         mRecyclerView.setAdapter(mAdapter);
 
-        queryData();
+        //queryData();
 
         //initializeData();
 
@@ -196,6 +196,7 @@ public class ResultListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.logout){
             FirebaseAuth.getInstance().signOut();
+            mItemsData.clear();
             finish();
             return true;
         }
@@ -236,6 +237,7 @@ public class ResultListActivity extends AppCompatActivity {
             mItems.orderBy("date", Query.Direction.ASCENDING).limit(Integer.parseInt(limit)).get().addOnSuccessListener(queryDocumentSnapshots -> {
                 for ( QueryDocumentSnapshot document :queryDocumentSnapshots){
                     MatchResult item = document.toObject(MatchResult.class);
+                    item.setId(document.getId());
                     mItemsData.add(item);
                 }
 
@@ -252,6 +254,7 @@ public class ResultListActivity extends AppCompatActivity {
             mItems.orderBy("date", Query.Direction.DESCENDING).limit(Integer.parseInt(limit)).get().addOnSuccessListener(queryDocumentSnapshots -> {
                 for ( QueryDocumentSnapshot document :queryDocumentSnapshots){
                     MatchResult item = document.toObject(MatchResult.class);
+                    item.setId(document.getId());
                     mItemsData.add(item);
                 }
 
@@ -290,7 +293,7 @@ public class ResultListActivity extends AppCompatActivity {
         super.onResume();
         if (!mp.isPlaying()) {
             mp.start();
-
+            queryData();
         }else{
             mp.pause();
         }
