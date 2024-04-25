@@ -229,11 +229,13 @@ public class ResultListActivity extends AppCompatActivity {
 
     public void deleteItem(MatchResult item) {
         DocumentReference ref = mItems.document(item._getId());
-        ref.delete().addOnSuccessListener(success -> {});
-
-        queryData();
-        mNotificationHelper.send("Törölted az eredményt!");
-
+        ref.delete().addOnSuccessListener(success -> {
+            queryData();
+            mNotificationHelper.send("Törölted az eredményt!");
+        }).addOnFailureListener(fail -> {
+            queryData();
+            Toast.makeText(this, "Nem sikerült a törlés.", Toast.LENGTH_LONG).show();
+        });
     }
 
 
